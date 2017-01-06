@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }} | Toro Development Network</title>
 
     <!-- Plugins-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
 
     <!-- Styles -->
@@ -128,7 +129,10 @@
 
 <!-- Scripts -->
 <script src="/js/app.js"></script>
+<script src="/js/custom.js"></script>
 <script src="https://use.fontawesome.com/52045bbe38.js"></script>
 <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 </body>
 </html>
