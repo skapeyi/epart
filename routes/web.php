@@ -37,6 +37,7 @@ Route::get('/terms','PagesController@terms');
 |---------------------------------------------------------
 */
 Route::resource('topics','TopicController');
+Route::get('topic/sample','TopicController@sample');
 
 /*
 |---------------------------------------------------------

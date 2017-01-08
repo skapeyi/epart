@@ -81,4 +81,8 @@ class TopicController extends Controller
     {
         //
     }
+
+    public function sample(){
+        return view('topic.sample');
+    }
 }

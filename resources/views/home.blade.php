@@ -27,7 +27,7 @@
                             <div class="btn-group pull-right">
                                 <a href="#" class="btn btn-default btn-sm" title="Comments"><i
                                             class="fa fa-comment"></i> 36</a>
-                                <a href="#" class="btn btn-default btn-sm" title="See topic"><i
+                                <a href="/topic/sample" class="btn btn-default btn-sm" title="See topic"><i
                                             class="fa fa-eye"></i></a>
 
                             </div>
