@@ -1,81 +1,103 @@
-@extends('layouts.app')
+@extends('layouts.home')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Trending discussion topics</h2>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-offset-2">
+                    <div class="header-content">
+                        <div class="header-content-inner">
+                            <h3>Toro Development Network (ToroDev) was founded in 2005 as an indigenous non-profit
+                                organization in Uganda, East Africa. It works to mobilize communities, sensitize, orient
+                                and train marginalized population groups in strategic use of ICT for Development tools
+                                for maximum resources utilization for self-sustainability. ToroDev’s activities focus on
+                                ICT-enabled public accountability and democratic engagement for improved service
+                                delivery, public policy research and advocacy, and, innovation and entrepreneurship
+                                development. T</h3>
+                            <a href="/register" class="btn btn-outline btn-xl page-scroll">Register Now for Free!</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </header>
 
-        <div class="row">
-            @for ($x =1; $x< 5; $x++)
-                <div class="col-md-3">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">Topic name {{$x}}</h4>
-                        </div>
-                        <div class="panel-body">
-                            <p>Vestibulum dignissim vulputate lectus a feugiat. Morbi sollicitudin, quam ac cursus
-                                finibus,
-                                leo
-                                lorem faucibus sapien, vitae interdum justo felis non quam. Vestibulum lobortis eros nec
-                                erat
-                                pretium, lobortis auctor nibh ultrices.</p>
-                        </div>
-                        <div class="panel-footer" style="min-height: 50px;">
-                            <div class="btn-group pull-right">
-                                <a href="#" class="btn btn-default btn-sm" title="Comments"><i
-                                            class="fa fa-comment"></i> 36</a>
-                                <a href="/topic/sample" class="btn btn-default btn-sm" title="See topic"><i
-                                            class="fa fa-eye"></i></a>
+    <section id="download" class="download bg-primary text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="section-heading">e - Information</h2>
+                    <p>This module allows for the dissemination of all all formats of information e.g. Short message
+                        services (SMS), e-mails, images, etc and has self-triggered features that can send alter and
+                        remainders messages to interested parties.</p>
 
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-4" style="margin-top: 100px;">
+                    <a href="/register" class="btn btn-outline btn-xl page-scroll">Get information now!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>e-Discussion</h2>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-9 col-md-offset-3">
+                    <p style="text-align: center;">The module should be designed to supplement face to face discussions and have features that support real-time online and offline discussions.</p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <div class="container">
+                <h2>e-Decision making.</h2>
+                <div class="row">
+                    <div class="col-md-5">
+                        <p style="text-align: center;color: #fff; ">The module should be designed to supplement face to face discussions and have features that support real-time online and offline discussions.</p>
+
                     </div>
 
                 </div>
-            @endfor
-        </div>
-
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Newest topics</h2>
+                <a href="/login" class="btn btn-outline btn-xl page-scroll">Let's Get Started!</a>
             </div>
         </div>
+        <div class="overlay"></div>
+    </section>
 
-        <div class="row">
-            @for ($x =1; $x< 5; $x++)
-                <div class="col-md-3">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">Topic name {{$x}}</h4>
-                        </div>
-                        <div class="panel-body">
-                            <p>Vestibulum dignissim vulputate lectus a feugiat. Morbi sollicitudin, quam ac cursus
-                                finibus,
-                                leo
-                                lorem faucibus sapien, vitae interdum justo felis non quam. Vestibulum lobortis eros nec
-                                erat
-                                pretium, lobortis auctor nibh ultrices.</p>
-                        </div>
-                        <div class="panel-footer" style="min-height: 50px;">
-                            <div class="btn-group pull-right">
-                                <a href="#" class="btn btn-default btn-sm" title="Comments"><i
-                                            class="fa fa-comment"></i> 36</a>
-                                <a href="#" class="btn btn-default btn-sm" title="See topic"><i
-                                            class="fa fa-eye"></i></a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            @endfor
+    <section id="contact" class="contact bg-primary">
+        <div class="container">
+            <h2>We love new friends!</h2>
+            <ul class="list-inline list-social">
+                <li class="social-twitter">
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="social-facebook">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="social-google-plus">
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                </li>
+            </ul>
         </div>
+    </section>
 
-    </div>
+
+
 @endsection

@@ -17,8 +17,7 @@
 
 
 
-Route::get('/', 'HomeController@index1');
-Route::get('/home','HomeController@index');
+Route::get('/', 'PagesController@index');
 Auth::routes();
 
 #Route::get('/', 'Auth\LoginController@showLoginForm');
@@ -28,6 +27,7 @@ Auth::routes();
 | All access pages routes
 |--------------------------------------------------------------------------
 */
+
 Route::get('/contact','PagesController@contact');
 Route::get('/faq','PagesController@faq');
 Route::get('/privacy','PagesController@privacy');
