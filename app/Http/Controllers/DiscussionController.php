@@ -4,17 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TopicController extends Controller
+class DiscussionController extends Controller
 {
  /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+//    public function __construct()
+//    {
+//        $this->middleware('auth');
+//    }
     
 
 
@@ -25,7 +25,7 @@ class TopicController extends Controller
      */
     public function index()
     {
-        //
+        return view('discussion.index');
     }
 
     /**
@@ -35,7 +35,7 @@ class TopicController extends Controller
      */
     public function create()
     {
-        //
+        return view('discussion.create');
     }
 
     /**

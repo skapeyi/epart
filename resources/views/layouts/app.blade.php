@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} | Toro Development Network</title>
+    <title>{{ config('app.name', 'Laravel') }} | Me and my leader</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -57,6 +57,8 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url('/discussions') }}">Discussion</a></li>
+                    <li><a href="{{ url('/information') }}">Information</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
@@ -65,7 +67,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
-                                Account<span class="caret"></span>
+                                Account <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
@@ -84,6 +86,7 @@
                             </ul>
                         </li>
                     @endif
+
                 </ul>
             </div>
         </div>

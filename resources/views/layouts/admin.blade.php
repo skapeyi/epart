@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} | Toro Development Network</title>
+    <title>{{ config('app.name', 'Laravel') }} | Me and my leader</title>
 
     <!-- Plugins-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -61,6 +61,8 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url('/discussions') }}">Participate</a></li>
+                    <li><a href="{{ url('/information') }}">Information</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
@@ -88,6 +90,7 @@
                             </ul>
                         </li>
                     @endif
+
                 </ul>
             </div>
         </div>
@@ -98,8 +101,8 @@
             <div class="col-md-3">
                 <ul class="nav nav-sidebar">
                     <li class="active"><a href="/admin/users">Users</a></li>
-                    <li><a href="/admin/topics">Topics</a></li>
-                    <li><a href="/admin/comments">Comments</a></li>
+                    <li><a href="/admin/topics">Discussions</a></li>
+                    <li><a href="/admin/comments">Information</a></li>
                 </ul>
 
 

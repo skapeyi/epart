@@ -18,6 +18,8 @@
 
 
 Route::get('/', 'PagesController@index');
+Route::get('/home','HomeController@index');
+Route::get('/dashboard', 'HomeController@dashboard')->middleware('auth');
 Auth::routes();
 
 #Route::get('/', 'Auth\LoginController@showLoginForm');
@@ -36,11 +38,20 @@ Route::get('/terms','PagesController@terms');
 
 /*
 |---------------------------------------------------------
-| The topics controller
+| The Discussion controller
 |---------------------------------------------------------
 */
-Route::resource('topics','TopicController');
-Route::get('topic/sample','TopicController@sample');
+Route::resource('discussions','DiscussionController');
+Route::get('discussions/sample','DiscussionController@sample');
+
+/*
+|---------------------------------------------------------
+| The Information controller
+|---------------------------------------------------------
+*/
+
+Route::resource('information','InformationController');
+
 
 /*
 |---------------------------------------------------------

@@ -285,3 +285,7 @@ body {
     width: 320px;
   }
 }
+
+.navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
+  color:#344E86;
+}

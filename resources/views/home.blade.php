@@ -7,13 +7,12 @@
                 <div class="col-sm-9 col-md-offset-2">
                     <div class="header-content">
                         <div class="header-content-inner">
-                            <h3>Toro Development Network (ToroDev) was founded in 2005 as an indigenous non-profit
-                                organization in Uganda, East Africa. It works to mobilize communities, sensitize, orient
-                                and train marginalized population groups in strategic use of ICT for Development tools
-                                for maximum resources utilization for self-sustainability. ToroDev’s activities focus on
-                                ICT-enabled public accountability and democratic engagement for improved service
-                                delivery, public policy research and advocacy, and, innovation and entrepreneurship
-                                development. T</h3>
+                            <h3>Toro Development together with SPIDER – The Swedish Program for ICT in Developing
+                                Regions at the Department of Computer & System Sciences (DSV) Stockholm University and
+                                other partners to implement the proposed “MML – Me & My Leader” eParticipation System
+                                that uses MobileSMS – Radio – Online/Internet technologies to promote citizens’
+                                engagement with duty-bearers in Uganda and Kenya to improve prioritized public service
+                                delivery.</h3>
                             <a href="/register" class="btn btn-outline btn-xl page-scroll">Register Now for Free!</a>
                         </div>
                     </div>
@@ -34,7 +33,7 @@
 
                 </div>
                 <div class="col-md-4" style="margin-top: 100px;">
-                    <a href="/register" class="btn btn-outline btn-xl page-scroll">Get information now!</a>
+                    <a href="/information" class="btn btn-outline btn-xl page-scroll">Get information now!</a>
                 </div>
             </div>
         </div>
@@ -44,19 +43,18 @@
     <section id="features" class="features">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-heading">
-                        <h2>e-Discussion</h2>
-                        <hr>
-                    </div>
+                <div class="col-lg-8 col-md-offset-3 text-center">
+                    <h2 class="section-heading">e-Discussion</h2>
+                    <p>The module should be designed to supplement face to face discussions and have features that
+                        support real-time online and offline discussions.</p>
+                    <a href="/discussion" class="btn btn-outline btn-xl page-scroll">Get involved!</a>
+
+
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-9 col-md-offset-3">
-                    <p style="text-align: center;">The module should be designed to supplement face to face discussions and have features that support real-time online and offline discussions.</p>
 
-                </div>
 
             </div>
 
@@ -70,7 +68,9 @@
                 <h2>e-Decision making.</h2>
                 <div class="row">
                     <div class="col-md-5">
-                        <p style="text-align: center;color: #fff; ">The module should be designed to supplement face to face discussions and have features that support real-time online and offline discussions.</p>
+                        <p style="text-align: center;color: #fff; ">The module should be designed to supplement face to
+                            face discussions and have features that support real-time online and offline
+                            discussions.</p>
 
                     </div>
 

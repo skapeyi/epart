@@ -10,6 +10,12 @@ use App\Comment;
 
 class AdministratorController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function users(){
         $users = User::all()->toArray();
         return view('admin.users', compact('users'));
@@ -18,6 +24,9 @@ class AdministratorController extends Controller
     public function getUsers(){
         return Datatables::of(User::query())->make(true);
     }
+
+   
+
 
     public function topics(){
         $topics = Topic::all()->toArray();
