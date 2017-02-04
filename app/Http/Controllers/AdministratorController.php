@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Discussion;
+use App\Information;
 use Illuminate\Http\Request;
 use Yajra\Datatables\Services\DataTable;
 use Illuminate\Foundation\Auth\User;
@@ -18,7 +20,7 @@ class AdministratorController extends Controller
     
     public function users(){
         $users = User::all()->toArray();
-        return view('admin.users', compact('users'));
+        return view('admin.users.all', compact('users'));
     }
 
     public function getUsers(){
@@ -28,14 +30,14 @@ class AdministratorController extends Controller
    
 
 
-    public function topics(){
-        $topics = Topic::all()->toArray();
-        return view('admin.topics',compact('topics'));
+    public function discussions(){
+        $discussions = Discussion::all()->toArray();
+        return view('admin.discussions.all',compact('discussions'));
     }
 
-    public function comments(){
-        $comments = Comment::all()->toArray();
-        return view('admin.comments');
+    public function information(){
+        $information = Information::all()->toArray();
+        return view('admin.information.all', compact('information'));
     }
 
 

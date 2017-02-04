@@ -4,13 +4,8 @@
     <div class="panel panel-default">
         <div class="panel-heading clearfix">
             <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Discussion topics</h4>
-            <div class="btn-group pull-right">
-                <button
-                        type="button"
-                        class="btn btn-success btn-sm"
-                        data-toggle="modal"
-                        data-target="#userModal">
-                    <i class="glyphicon glyphicon-plus"></i> Add Topic
+            <div class="pull-right">
+                <a href="/information/create" class="btn btn-success" role="button">Add information</a>
                 </button>
             </div>
         </div>
@@ -33,14 +28,14 @@
                 $i = 1
                 @endphp
 
-                @foreach($topics as $topic)
+                @foreach($information as $item)
                     <tr>
                         <td>{{$i}}</td>
-                        <td>{{$topic["title"]}}</td>
-                        <td>{{$topic["category"]}}</td>
-                        <td>{{$topic["author_id"]}}</td>
-                        <td>{{$topic["views"]}}</td>
-                        <td>{{date('d/M/y',strtotime($topic["created_at"]))}}</td>
+                        <td>{{$item["title"]}}</td>
+                        <td>{{$item["category"]}}</td>
+                        <td>{{$item["user_id"]}}</td>
+                        <td>{{$item["click_count"]}}</td>
+                        <td>{{date('d/M/y',strtotime($item["created_at"]))}}</td>
                         <td>
                             <p data-placement="top" data-toggle="tooltip" title="Delete">
                                 <button class="btn btn-danger btn-xs" data-title="Delete"><span

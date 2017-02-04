@@ -19,6 +19,7 @@ class CreateInformationTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->text('content');
+            $table->string('category');
             $table->integer('user_id')->unsigned();
             $table->string('img_url');
             $table->string('attachment_url');

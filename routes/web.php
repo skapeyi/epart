@@ -60,5 +60,5 @@ Route::resource('information','InformationController');
 */
 Route::get('/admin','AdministratorController@users');
 Route::get('/admin/users', 'AdministratorController@users');
-Route::get('/admin/topics', 'AdministratorController@topics');
-Route::get('/admin/comments', 'AdministratorController@comments');
+Route::get('/admin/discussions', 'AdministratorController@discussions');
+Route::get('/admin/information', 'AdministratorController@information');

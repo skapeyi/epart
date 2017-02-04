@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Discussion;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class DiscussionController extends Controller
 {
@@ -34,7 +37,7 @@ class DiscussionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {        
         return view('discussion.create');
     }
 
@@ -46,7 +49,23 @@ class DiscussionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if(Auth::check()){
+            $user_id = Auth::user()->id;
+        }
+        else{
+            $user_id = Discussion::ANONYMOUS_USER;
+        }
+        Log::info($request);
+        $discussion = Discussion::create([
+            'title' => $request->title,
+            'category' => $request->category,
+            'content' => $request->content,
+            'user_id' => $user_id,
+        ]);
+
+        $request->session()->flash('status','You topic has been saved and is awaiting approval');
+
+        return redirect('/discussions');
     }
 
     /**

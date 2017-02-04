@@ -19,7 +19,6 @@ class CreateDiscussionsTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('category');
-            $table->integer('views');
             $table->string('slug');
             $table->integer('user_id')->unsigned();
             $table->longText('content');

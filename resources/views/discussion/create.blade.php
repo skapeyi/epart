@@ -6,14 +6,14 @@
             <div class="panel panel-primary">
                 <div class="panel-heading"><h4>Start discussion</h4></div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/create') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/discussions') }}">
                         {{ csrf_field() }}
                         <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-2 control-label">Title</label>
 
                             <div class="col-md-10">
                                 <input id="name" type="text" class="form-control" name="title" value="{{ old('title') }}"
-                                       required autofocus>
+                                       >
 
                                 @if ($errors->has('title'))
                                     <span class="help-block">
@@ -27,7 +27,7 @@
 
                             <div class="col-md-10">
                                 <input id="name" type="text" class="form-control" name="category" value="{{ old('category') }}"
-                                       required autofocus>
+                                      >
 
                                 @if ($errors->has('category'))
                                     <span class="help-block">
@@ -40,8 +40,8 @@
                             <label for="name" class="col-md-2 control-label">Content</label>
 
                             <div class="col-md-10">
-                                <input id="name" type="text" class="form-control" name="content" value="{{ old('title') }}"
-                                       required autofocus>
+                                <textarea id="name" type="text" class="form-control" name="content" value="{{ old('title') }}"
+                                       ></textarea>
 
                                 @if ($errors->has('content'))
                                     <span class="help-block">
@@ -78,5 +78,14 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="{{ asset('/js/tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({
+            selector : "textarea",
+            plugins : ["advlist autolink lists link image charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table contextmenu paste"],
+            toolbar : "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+        });
+
+    </script>
 
 @endsection

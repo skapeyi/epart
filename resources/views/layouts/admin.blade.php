@@ -101,8 +101,8 @@
             <div class="col-md-3">
                 <ul class="nav nav-sidebar">
                     <li class="active"><a href="/admin/users">Users</a></li>
-                    <li><a href="/admin/topics">Discussions</a></li>
-                    <li><a href="/admin/comments">Information</a></li>
+                    <li><a href="/admin/discussions">Discussions</a></li>
+                    <li><a href="/admin/information">Information</a></li>
                 </ul>
 
 

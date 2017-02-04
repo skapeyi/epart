@@ -18,5 +18,12 @@ class DatabaseSeeder extends Seeder
             'phone'=>'256774466600',
             'password' => bcrypt('admin'),
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'anonymous',
+            'email' => 'anonymouse@epart.com',
+            'phone'=>'256774466601',
+            'password' => bcrypt('anonymous'),
+        ]);
     }
 }
