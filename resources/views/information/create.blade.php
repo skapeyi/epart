@@ -6,7 +6,7 @@
             <div class="panel panel-primary">
                 <div class="panel-heading"><h4>Add information</h4></div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/information') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/information') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-2 control-label">Title</label>

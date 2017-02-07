@@ -24,7 +24,7 @@ class Information extends Model
     const DEFAULT_SLUG = "#";
     const DEFAULT_IMG_URL = '#';
 
-    protected $fillable = ['title','content','category', 'user_id','click_count'];
+    protected $fillable = ['title','content','category', 'user_id','click_count','attachment_url'];
 
     #Default values
     protected $attributes = [

@@ -28,7 +28,8 @@ class DiscussionController extends Controller
      */
     public function index()
     {
-        return view('discussion.index');
+        $discussions = Discussion::all()->toArray();
+        return view('discussion.index', compact('discussions'));
     }
 
     /**
@@ -76,7 +77,9 @@ class DiscussionController extends Controller
      */
     public function show($id)
     {
-        //
+        $discussion = Discussion::findOrFail($id)->toArray();
+
+        return view('discussion.view', compact('discussion'));
     }
 
     /**

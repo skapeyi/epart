@@ -25,63 +25,41 @@
     <section id="download" class="download bg-primary text-center">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-                    <h2 class="section-heading">e - Information</h2>
-                    <p>This module allows for the dissemination of all all formats of information e.g. Short message
-                        services (SMS), e-mails, images, etc and has self-triggered features that can send alter and
-                        remainders messages to interested parties.</p>
-
-                </div>
-                <div class="col-md-4" style="margin-top: 100px;">
+                <div class="col-md-4">
+                    <h3 class="section-heading">e - Information</h3>
+                    <p>This allows for the dissemination of all all formats of information e.g. SMS, e-mails, images, a self-triggered features that can send remainders to interested parties.</p>
                     <a href="/information" class="btn btn-outline btn-xl page-scroll">Get information now!</a>
+
                 </div>
-            </div>
-        </div>
-    </section>
 
-
-    <section id="features" class="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-offset-3 text-center">
-                    <h2 class="section-heading">e-Discussion</h2>
+                <div class="col-md-4">
+                    <h3 class="section-heading">e-Discussion</h3>
                     <p>The module should be designed to supplement face to face discussions and have features that
                         support real-time online and offline discussions.</p>
-                    <a href="/discussion" class="btn btn-outline btn-xl page-scroll">Get involved!</a>
+                    <a href="/discussions" class="btn btn-outline btn-xl page-scroll">Get involved!</a>
 
 
                 </div>
-            </div>
 
-            <div class="row">
-
-
-            </div>
-
-
-        </div>
-    </section>
-
-    <section class="cta">
-        <div class="cta-content">
-            <div class="container">
-                <h2>e-Decision making.</h2>
-                <div class="row">
-                    <div class="col-md-5">
-                        <p style="text-align: center;color: #fff; ">The module should be designed to supplement face to
-                            face discussions and have features that support real-time online and offline
-                            discussions.</p>
-
-                    </div>
+                <div class="col-md-4">
+                    <h3 class="section-heading">e - Decision Making</h3>
+                    <p>The module should be designed to supplement face to
+                        face discussions and have features that support real-time online and offline
+                        discussions.</p>
+                    <a href="/login" class="btn btn-outline btn-xl page-scroll">Let's Get Started!</a>
 
                 </div>
-                <a href="/login" class="btn btn-outline btn-xl page-scroll">Let's Get Started!</a>
+
             </div>
         </div>
-        <div class="overlay"></div>
     </section>
 
-    <section id="contact" class="contact bg-primary">
+
+
+
+
+
+    <section id="contact" class="contact bg-primary" style="background: #943B7D">
         <div class="container">
             <h2>We love new friends!</h2>
             <ul class="list-inline list-social">
@@ -95,6 +73,18 @@
                     <a href="#"><i class="fa fa-google-plus"></i></a>
                 </li>
             </ul>
+        </div>
+    </section>
+
+    <section  id="partners">
+        <div class="container">
+            <h2>Our Partners</h2>
+            <div class="col-md-6">
+                <img src="/img/spider.png" class="img-responsive">
+            </div>
+            <div class="col-md-6">
+                <img src="/img/ned.png" class="img-responsive">
+            </div>
         </div>
     </section>
 
