@@ -61,7 +61,6 @@
 
     <section id="contact" class="contact bg-primary" style="background: #943B7D">
         <div class="container">
-            <h2>We love new friends!</h2>
             <ul class="list-inline list-social">
                 <li class="social-twitter">
                     <a href="#"><i class="fa fa-twitter"></i></a>
