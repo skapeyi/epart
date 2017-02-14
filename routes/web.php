@@ -35,6 +35,7 @@ Route::get('/faq','PagesController@faq');
 Route::get('/privacy','PagesController@privacy');
 Route::get('/terms','PagesController@terms');
 Route::get('/sample','PagesController@sample');
+Route::get('/sms-participation','PagesController@smsparticipation');
 
 
 /*

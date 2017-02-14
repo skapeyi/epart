@@ -59,6 +59,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ url('/discussions') }}">Discussion</a></li>
                     <li><a href="{{ url('/information') }}">Information</a></li>
+                    <li><a href="{{ url('/sms-participation') }}">SMS participation</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>

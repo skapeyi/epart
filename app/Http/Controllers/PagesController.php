@@ -31,4 +31,9 @@ class PagesController extends Controller
     public function sample(){
         return view('discussion.sample');
     }
+
+    public function smsparticipation(){
+        return view ('pages.smsparticipation');
+    }
+
 }
