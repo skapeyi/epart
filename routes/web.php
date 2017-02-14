@@ -34,6 +34,7 @@ Route::get('/contact','PagesController@contact');
 Route::get('/faq','PagesController@faq');
 Route::get('/privacy','PagesController@privacy');
 Route::get('/terms','PagesController@terms');
+Route::get('/sample','PagesController@sample');
 
 
 /*
@@ -62,3 +63,12 @@ Route::get('/admin','AdministratorController@users');
 Route::get('/admin/users', 'AdministratorController@users');
 Route::get('/admin/discussions', 'AdministratorController@discussions');
 Route::get('/admin/information', 'AdministratorController@information');
+
+
+/*
+|---------------------------------------------------------
+| The Comment controller
+|---------------------------------------------------------
+*/
+
+Route::resource('comment','CommentController');

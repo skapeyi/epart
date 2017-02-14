@@ -3,25 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Comment;
-use App\Discussion;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
-class DiscussionController extends Controller
+class CommentController extends Controller
 {
- /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-//    public function __construct()
-//    {
-//        $this->middleware('auth');
-//    }
-    
-
-
     /**
      * Display a listing of the resource.
      *
@@ -29,8 +16,7 @@ class DiscussionController extends Controller
      */
     public function index()
     {
-        $discussions = Discussion::all()->toArray();
-        return view('discussion.index', compact('discussions'));
+        //
     }
 
     /**
@@ -39,8 +25,8 @@ class DiscussionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {        
-        return view('discussion.create');
+    {
+        //
     }
 
     /**
@@ -51,23 +37,24 @@ class DiscussionController extends Controller
      */
     public function store(Request $request)
     {
+        //Log::info($request);
         if(Auth::check()){
             $user_id = Auth::user()->id;
         }
         else{
             $user_id = Discussion::ANONYMOUS_USER;
         }
-        
-        $discussion = Discussion::create([
-            'title' => $request->title,
-            'category' => $request->category,
+
+        $comment = Comment::create([
             'content' => $request->content,
             'user_id' => $user_id,
+            'discussion_id' => $request->discussion_id
         ]);
 
-        $request->session()->flash('status','You topic has been saved and is awaiting approval');
 
-        return redirect('/discussions');
+        $request->session()->flash('status','You comment has been saved and is awaiting approval');
+
+        return redirect('/discussions/'.$request->discussion_id);
     }
 
     /**
@@ -78,12 +65,7 @@ class DiscussionController extends Controller
      */
     public function show($id)
     {
-        $discussion = Discussion::findOrFail($id)->toArray();
-        $comments = Comment::where(['discussion_id' => $id])->get()->toArray();
-
-        
-
-        return view('discussion.view', compact('discussion','comments'));
+        //
     }
 
     /**
@@ -118,9 +100,5 @@ class DiscussionController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function sample(){
-        return view('topic.sample');
     }
 }

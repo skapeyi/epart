@@ -26,4 +26,8 @@ class PagesController extends Controller
     public function contact(){
     	return view('pages.contact');
     }
+
+    public function sample(){
+        return view('discussion.sample');
+    }
 }

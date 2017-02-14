@@ -111,6 +111,7 @@
 
 <!-- Scripts -->
 <script src="/js/app.js"></script>
+<script src="/js/custom.js"></script>
 <script src="https://use.fontawesome.com/52045bbe38.js"></script>
 
 </body>
