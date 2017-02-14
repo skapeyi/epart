@@ -41,12 +41,11 @@
                 <!-- Branding Image -->
                 @if(Auth::guest())
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{--{{ config('app.name', 'Laravel') }}--}}
                         <img src="/img/logo.png">
                     </a>
                 @else
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}<br/>{{Auth::user()->email}}
+                        <img src="/img/logo.png">
                     </a>
                 @endif
             </div>

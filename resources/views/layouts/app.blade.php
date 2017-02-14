@@ -10,8 +10,8 @@
 
     <title>{{ config('app.name', 'Laravel') }} | Me and my leader</title>
 
-    <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/new-age.min.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
     <!-- <link href="/css/creative.min.css" rel="stylesheet"> -->
 
@@ -24,7 +24,7 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 50px; background-color: #FFFFFF; min-height: 80px;">
         <div class="container">
             <div class="navbar-header">
 
@@ -40,11 +40,11 @@
                 <!-- Branding Image -->
                 @if(Auth::guest())
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        <img src="/img/logo.png">
                     </a>
                 @else
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}<br/>{{Auth::user()->email}}
+                        <img src="/img/logo.png">
                     </a>
                 @endif
             </div>
@@ -94,7 +94,7 @@
 
     @yield('content')
 </div>
-<div class="navbar navbar-default navbar-fixed-bottom">
+<div class="navbar navbar-default navbar-fixed-bottom hidden-sm">
     <div class="container">
         <p class="navbar-text pull-left">© <?= date("Y")?>
             <a href="http://torodev.co.ug/" target="_blank">Toro Development Network</a>

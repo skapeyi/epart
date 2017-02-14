@@ -96,7 +96,8 @@ $('#post_comment').on('click', function (e) {
                 "discussion_id": $('#discussion_id').val()
             },
             success: function ($data) {
-
+                $('#comment').val('');
+                location.reload();
             }
         });
 

@@ -115,7 +115,7 @@
     </div>
 
 </div>
-<div class="navbar navbar-default navbar-fixed-bottom">
+<div class="navbar navbar-default navbar-fixed-bottom hidden-sm">
     <div class="container">
         <p class="navbar-text pull-left">© <?= date("Y")?>
             <a href="http://torodev.co.ug/" target="_blank">Toro Development Network</a>

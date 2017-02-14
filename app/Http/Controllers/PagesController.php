@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Symfony\Component\DomCrawler\Form;
 
 class PagesController extends Controller
 {

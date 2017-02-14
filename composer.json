@@ -9,7 +9,8 @@
         "ckeditor/ckeditor": "^4.6",
         "laravel/framework": "5.3.*",
         "tinymce/tinymce": "^4.5",
-        "yajra/laravel-datatables-oracle": "~6.0"
+        "yajra/laravel-datatables-oracle": "~6.0",
+        "illuminate/html": "^4.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

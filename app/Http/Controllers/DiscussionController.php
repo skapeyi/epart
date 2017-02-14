@@ -79,10 +79,7 @@ class DiscussionController extends Controller
     public function show($id)
     {
         $discussion = Discussion::findOrFail($id)->toArray();
-        $comments = Comment::where(['discussion_id' => $id])->get()->toArray();
-
-        
-
+        $comments = Comment::where(['discussion_id' => $id])->latest()->get()->toArray();
         return view('discussion.view', compact('discussion','comments'));
     }
 

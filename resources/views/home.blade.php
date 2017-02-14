@@ -1,13 +1,13 @@
 @extends('layouts.home')
 
 @section('content')
-    <header>
+    <header >
         <div class="container">
             <div class="row">
                 <div class="col-sm-9 col-md-offset-2">
-                    <div class="header-content">
+                    <div class="header-content" style="max-height: 320px;">
                         <div class="header-content-inner">
-                            <h3>Toro Development together with SPIDER – The Swedish Program for ICT in Developing
+                            <h3>Toro Development Network(ToroDev) together with SPIDER – The Swedish Program for ICT in Developing
                                 Regions at the Department of Computer & System Sciences (DSV) Stockholm University and
                                 other partners to implement the proposed “MML – Me & My Leader” eParticipation System
                                 that uses MobileSMS – Radio – Online/Internet technologies to promote citizens’
@@ -59,23 +59,23 @@
 
 
 
-    <section id="contact" class="contact bg-primary" style="background: #943B7D">
-        <div class="container">
-            <ul class="list-inline list-social">
-                <li class="social-twitter">
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li class="social-facebook">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li class="social-google-plus">
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                </li>
-            </ul>
-        </div>
-    </section>
+    {{--<section id="contact" class="contact bg-primary" style="background: #943B7D">--}}
+        {{--<div class="container">--}}
+            {{--<ul class="list-inline list-social">--}}
+                {{--<li class="social-twitter">--}}
+                    {{--<a href="#"><i class="fa fa-twitter"></i></a>--}}
+                {{--</li>--}}
+                {{--<li class="social-facebook">--}}
+                    {{--<a href="#"><i class="fa fa-facebook"></i></a>--}}
+                {{--</li>--}}
+                {{--<li class="social-google-plus">--}}
+                    {{--<a href="#"><i class="fa fa-google-plus"></i></a>--}}
+                {{--</li>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+    {{--</section>--}}
 
-    <section  id="partners">
+    <section  id="partners" style="padding: 0px;">
         <div class="container">
             <h2>Our Partners</h2>
             <div class="col-md-6">
