@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>E-Discussion</h2>
+            </div>
+        </div>
+    </div>
     @if(empty($discussions))
         <div class="container">
             <div class="row">

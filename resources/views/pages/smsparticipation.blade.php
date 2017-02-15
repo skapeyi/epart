@@ -4,14 +4,14 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-3" >
+            <div class="col-md-5" >
                 <h3>How to participate</h3>
                 <ol style="padding-left: 20px;">
                     <li>Instruction on how to use the short code will go here! </li>
                 </ol>
 
             </div>
-            <div class="col-md-9">
+            <div class="col-md-7">
                 <h3>Received messages</h3>
 
                 <div class="panel panel-default">
