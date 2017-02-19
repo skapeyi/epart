@@ -83,6 +83,6 @@ Route::resource('comment','CommentController');
 
 Route::get('/radiotopics','RadioController@radioTopics');
 Route::get('/addradiotopic','RadioController@addRadiotopic');
-Route::get('radiotopics/{id}','Radiocontroller@retrieveRadiotopic');
+Route::get('radiotopics/{id}','RadioController@retrieveRadiotopic');
 Route::post('/radiotopics','RadioController@storeRadiotopic');
 Route::post('/radiotopicresponse','RadioController@storeRadioresponse');
