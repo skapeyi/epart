@@ -73,3 +73,16 @@ Route::get('/admin/information', 'AdministratorController@information');
 */
 
 Route::resource('comment','CommentController');
+
+
+/*
+|---------------------------------------------------------
+| The Radio routes
+|---------------------------------------------------------
+*/
+
+Route::get('/radiotopics','RadioController@radioTopics');
+Route::get('/addradiotopic','RadioController@addRadiotopic');
+Route::get('radiotopics/{id}','Radiocontroller@retrieveRadiotopic');
+Route::post('/radiotopics','RadioController@storeRadiotopic');
+Route::post('/radiotopicresponse','RadioController@storeRadioresponse');
