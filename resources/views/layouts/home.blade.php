@@ -96,7 +96,7 @@
 
     @yield('content')
 </div>
-<div class="navbar navbar-default">
+<div class="navbar navbar-default navbar-fixed-bottom hidden-sm hidden-xs">
     <div class="container">
         <p class="navbar-text pull-left">© <?= date("Y")?>
             <a href="http://torodev.co.ug/" target="_blank">Toro Development Network</a>

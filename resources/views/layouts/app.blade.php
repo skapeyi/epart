@@ -56,7 +56,7 @@
                 </ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right ">
                     <li><a href="{{ url('/discussions') }}">Discussion</a></li>
                     <li><a href="{{ url('/information') }}">Information</a></li>
                     <li><a href="{{ url('/sms-participation') }}">SMS participation</a></li>
@@ -95,7 +95,7 @@
 
     @yield('content')
 </div>
-<div class="navbar navbar-default navbar-fixed-bottom hidden-sm">
+<div class="navbar navbar-default navbar-fixed-bottom hidden-sm hidden-xs">
     <div class="container">
         <p class="navbar-text pull-left">© <?= date("Y")?>
             <a href="http://torodev.co.ug/" target="_blank">Toro Development Network</a>

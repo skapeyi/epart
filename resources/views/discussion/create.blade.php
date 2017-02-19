@@ -26,8 +26,13 @@
                             <label for="name" class="col-md-2 control-label">Category</label>
 
                             <div class="col-md-10">
-                                <input id="name" type="text" class="form-control" name="category" value="{{ old('category') }}"
-                                      >
+
+                                <select class="form-control" id="category" name="category">
+                                    <option>Education</option>
+                                    <option>Politics</option>
+                                    <option>Service delivery</option>
+                                    <option>Health</option>
+                                </select>
 
                                 @if ($errors->has('category'))
                                     <span class="help-block">
