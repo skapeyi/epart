@@ -19,8 +19,8 @@ class CreateSmsTable extends Migration
             $table->string('to')->nullable();
             $table->string('text')->nullable();
             $table->string('date')->nullable();
-            $table->integer('aft_id')->unique();
-            $table->string('link_id');
+            $table->string('aft_id')->nullable();
+            $table->string('link_id')->nullable();
             $table->integer('discussion_id')->unsigned();
             $table->boolean('approved')->default(0);
             $table->timestamps();
