@@ -64,6 +64,7 @@ Route::get('/admin','AdministratorController@users');
 Route::get('/admin/users', 'AdministratorController@users');
 Route::get('/admin/discussions', 'AdministratorController@discussions');
 Route::get('/admin/information', 'AdministratorController@information');
+Route::get('/admin/sms','AdministratorController@sms');
 
 
 /*

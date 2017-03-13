@@ -104,6 +104,7 @@
                     <li><a href="/admin/discussions">Discussions</a></li>
                     <li><a href="/admin/information">Information</a></li>
                     <li><a href="/radiotopics">Dj Area</a></li>
+                    <li><a href="/admin/sms">Sms</a></li>
                 </ul>
 
 

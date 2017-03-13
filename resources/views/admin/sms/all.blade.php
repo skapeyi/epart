@@ -15,12 +15,11 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Author</th>
-                    <th>Total views</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Text</th>
+                    <th>Date Sent</th>
                     <th>Approved</th>
-                    <th>Created</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -29,15 +28,14 @@
                 $i = 1
                 @endphp
 
-                @foreach($discussions as $discussion)
+                @foreach($sms as $item)
                     <tr>
                         <td>{{$i}}</td>
-                        <td>{{$discussion["title"]}}</td>
-                        <td>{{$discussion["category"]}}</td>
-                        <td>{{$discussion["user_id"]}}</td>
-                        <td>{{$discussion["click_count"]}}</td>
-                        <td>{{$discussion["approved"]}}</td>
-                        <td>{{date('d/M/y',strtotime($discussion["created_at"]))}}</td>
+                        <td>{{$item["from"]}}</td>
+                        <td>{{$item["to"]}}</td>
+                        <td>{{$item["text"]}}</td>
+                        <td>{{$item["date"]}}</td>
+                        <td>{{$item["approved"]}}</td>
                         <td>
                             <p data-placement="top" data-toggle="tooltip" title="Delete">
                                 <button class="btn btn-danger btn-xs" data-title="Delete"><span

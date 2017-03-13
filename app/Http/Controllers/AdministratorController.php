@@ -17,7 +17,7 @@ class AdministratorController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function users(){
         $users = User::all()->toArray();
         return view('admin.users.all', compact('users'));
@@ -26,8 +26,6 @@ class AdministratorController extends Controller
     public function getUsers(){
         return Datatables::of(User::query())->make(true);
     }
-
-   
 
 
     public function discussions(){
@@ -38,6 +36,11 @@ class AdministratorController extends Controller
     public function information(){
         $information = Information::all()->toArray();
         return view('admin.information.all', compact('information'));
+    }
+
+    public function sms(){
+        $sms = Sms::all()->toArray();
+        return view('admin.sms.all',compact('sms'));
     }
 
 
