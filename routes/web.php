@@ -86,3 +86,11 @@ Route::get('/addradiotopic','RadioController@addRadiotopic');
 Route::get('radiotopics/{id}','RadioController@retrieveRadiotopic');
 Route::post('/radiotopics','RadioController@storeRadiotopic');
 Route::post('/radiotopicresponse','RadioController@storeRadioresponse');
+
+/*
+|---------------------------------------------------------
+| Africa's talking
+|---------------------------------------------------------
+*/
+Route::resource('sms','SmsController');
+Route::post('/retrieve_shortcode_messages','SmsController@store');

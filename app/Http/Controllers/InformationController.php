@@ -47,10 +47,7 @@ class InformationController extends Controller
                 'user_id' => $user_id,
                 'attachment_url' => $attachment_url
             ]);
-
         }
-
-
 
         $request->session()->flash('status','Information has been saved and is awaiting approval');
 
