@@ -19,7 +19,7 @@ class DiscussionController extends Controller
 //    {
 //        $this->middleware('auth');
 //    }
-    
+
 
 
     /**
@@ -39,7 +39,7 @@ class DiscussionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {        
+    {
         return view('discussion.create');
     }
 
@@ -57,7 +57,7 @@ class DiscussionController extends Controller
         else{
             $user_id = Discussion::ANONYMOUS_USER;
         }
-        
+
         $discussion = Discussion::create([
             'title' => $request->title,
             'category' => $request->category,
@@ -78,9 +78,18 @@ class DiscussionController extends Controller
      */
     public function show($id)
     {
+        $this->updateCount($id);
         $discussion = Discussion::findOrFail($id)->toArray();
         $comments = Comment::where(['discussion_id' => $id])->latest()->get()->toArray();
         return view('discussion.view', compact('discussion','comments'));
+    }
+
+    public function updateCount($id){
+      $discussion = Discussion::find($id);
+      $counter = $discussion->click_count;
+      $counter +=1;
+      $discussion->click_count = $counter;
+      $discussion->save();
     }
 
     /**

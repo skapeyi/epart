@@ -5,9 +5,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-9 col-md-offset-2">
-                    <div class="header-content" style="max-height: 250px;">
+                    <div class="header-content" style="max-height: 150px;">
                         <div class="header-content-inner">
-                            <h5 style="font-size: 18px;">Toro Development Network(ToroDev) together with SPIDER – The Swedish Program for ICT in Developing Regions at the Department of Computer & System Sciences (DSV) Stockholm University and other partners are implementing the “MML – Me & My Leader” eParticipation System that uses MobileSMS – Radio – Online/Internet technologies to promote citizens’ engagement with duty-bearers in Uganda and Kenya to improve prioritized public service delivery.</h5>
+                            <h5 style="font-size: 14px;">Toro Development Network(ToroDev) together with SPIDER – The Swedish Program for ICT in Developing Regions at the Department of Computer & System Sciences (DSV) Stockholm University and other partners are implementing the “MML – Me & My Leader” eParticipation System that uses MobileSMS – Radio – Online/Internet technologies to promote citizens’ engagement with duty-bearers in Uganda and Kenya to improve prioritized public service delivery.</h5>
                             <a href="/register" class="btn btn-outline btn-xl page-scroll">Register Now for Free!</a>
                         </div>
                     </div>
@@ -17,7 +17,7 @@
         </div>
     </header>
 
-    <section id="download" class="download bg-primary text-center" style="padding-top: 10px;">
+    <section id="download" class="download bg-primary text-center" style="padding-top: 10px; padding-bottom:10px;">
         <div class="container">
             <div class="row" >
                 <div class="col-md-4">
@@ -45,11 +45,6 @@
             </div>
         </div>
     </section>
-
-
-
-
-
 
     {{--<section id="contact" class="contact bg-primary" style="background: #943B7D">--}}
         {{--<div class="container">--}}

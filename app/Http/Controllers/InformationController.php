@@ -14,7 +14,7 @@ class InformationController extends Controller
 //    {
 //        $this->middleware('auth');
 //    }
-    
+
     public function index(){
         $information_articles = Information::all()->toArray();
         return view('information.index', compact('information_articles'));
@@ -58,7 +58,16 @@ class InformationController extends Controller
     }
 
     public function show($id){
+        $this->updateCount($id);
         $information = Information::find($id)->toArray();
         return view('information.view',compact('information'));
+    }
+
+    public function updateCount($id){
+      $information = information::find($id);
+      $counter = $information->click_count;
+      $counter += 1;
+      $information->click_count = $counter;
+      $information->save();
     }
 }

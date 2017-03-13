@@ -31,7 +31,7 @@
 
                             <div class="panel-footer" style="min-height: 50px;">
                                 <div class="btn-group pull-right">
-                                    <a href="#" class="btn btn-info btn-sm"><i class="fa fa-download"></i> {{$item['click_count']}} Downloads</a>
+                                    <a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> {{$item['click_count']}} View</a>
                                     <a href="/information/{{$item['id']}}" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> View details</a>
                                 </div>
                             </div>
