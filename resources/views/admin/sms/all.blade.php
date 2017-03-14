@@ -39,7 +39,7 @@
                         <td>
                             <p data-placement="top" data-toggle="tooltip" title="Delete">
                                 <button class="btn btn-danger btn-xs" data-title="Delete"><span
-                                            class="glyphicon glyphicon-trash"></span> Delete
+                                            class="glyphicon glyphicon-eye-open"></span> View
                                 </button>
                             </p>
                         </td>

@@ -9,6 +9,8 @@ use Yajra\Datatables\Services\DataTable;
 use Illuminate\Foundation\Auth\User;
 use App\Topic;
 use App\Comment;
+use App\Sms;
+use Illuminate\Support\Facades\DB;
 
 class AdministratorController extends Controller
 {

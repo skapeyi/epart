@@ -58,7 +58,13 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ url('/discussions') }}">Discussions</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Discussions <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/discussion">Platform Discussions</a></li>
+                      <li><a href="/radiotopics">Dj Login</a></li>
+                    </ul>
+                  </li>
                     <li><a href="{{ url('/information') }}">Information</a></li>
                     <li><a href="{{ url('/sms-participation') }}">SMS participation</a></li>
                     <!-- Authentication Links -->

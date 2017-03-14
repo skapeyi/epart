@@ -11,12 +11,6 @@
 |
 */
 
-#Route::get('/', function () {
-#    return view('welcome');
-#});
-
-
-
 Route::get('/', 'PagesController@index');
 Route::get('/home','HomeController@index');
 Route::get('/dashboard', 'HomeController@dashboard')->middleware('auth');
