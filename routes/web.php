@@ -76,11 +76,11 @@ Route::resource('comment','CommentController');
 |---------------------------------------------------------
 */
 
-Route::get('/radiotopics','RadioController@radioTopics');
-Route::get('/addradiotopic','RadioController@addRadiotopic');
-Route::get('radiotopics/{id}','RadioController@retrieveRadiotopic');
-Route::post('/radiotopics','RadioController@storeRadiotopic');
-Route::post('/radiotopicresponse','RadioController@storeRadioresponse');
+Route::get('/radiotopics','RadioController@radioTopics')->middleware('auth');
+Route::get('/addradiotopic','RadioController@addRadiotopic')->middleware('auth');
+Route::get('radiotopics/{id}','RadioController@retrieveRadiotopic')->middleware('auth');
+Route::post('/radiotopics','RadioController@storeRadiotopic')->middleware('auth');;
+Route::post('/radiotopicresponse','RadioController@storeRadioresponse')->middleware('auth');
 
 /*
 |---------------------------------------------------------
