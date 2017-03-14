@@ -64,7 +64,7 @@
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Discussions <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li><a href="/discussion">Platform Discussions</a></li>
+                        <li><a href="/discussions">Ongoing Discussions</a></li>
                         <li><a href="/radiotopics">Dj Login</a></li>
                       </ul>
                     </li>

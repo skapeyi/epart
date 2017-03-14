@@ -5,10 +5,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5" >
-                <h3>How to participate</h3>
+                <h5>To participate through SMS please follow the instructions below. Participation is free of charge.</h5>
                 <ol style="padding-left: 20px;">
-                    <li>Instruction on how to use the short code will go here! </li>
+                    <li>Go to your message and create new message.  </li>
+                    <li>Type MML leave a space Type your message. </li>
+                    <li>Send the message to 6115.</li>
                 </ol>
+                <p><stong>We will receive your message and have it included in our discussion.Thank You  </strong></p>
 
             </div>
             <div class="col-md-7">
