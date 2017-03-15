@@ -28,17 +28,13 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>Anonymous</td>
-                                <td>Thank you ToroDev for this engaging and timely system.</td>
-                                <td>11/Feb/2017</td>
-                            </tr>
-                            <tr>
-                                <td>Anonymous</td>
-                                <td>Our road are in a sorry state. They need to be fixed.</td>
-                                <td>14/Feb/2017</td>
-                            </tr>
-
+                              @foreach($smses as $sms)
+                                <tr>
+                                    <td>{{substr($sms['from'],0,9)}} **</td>
+                                    <td>{{$sms['text']}}</td>
+                                    <td>{{$sms['date']}}</td>
+                                </tr>
+                              @endforeach
                             </tbody>
                         </table>
                     </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Symfony\Component\DomCrawler\Form;
+use App\Sms;
 
 class PagesController extends Controller
 {
@@ -33,7 +34,8 @@ class PagesController extends Controller
     }
 
     public function smsparticipation(){
-        return view ('pages.smsparticipation');
+        $smses = Sms::where(['approved' => 1])->orderBy('id','DESC')->get()->toArray();
+        return view ('pages.smsparticipation', compact('smses'));
     }
 
 }

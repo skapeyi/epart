@@ -5,8 +5,7 @@
         <div class="panel-heading clearfix">
             <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Discussion topics</h4>
             <div class="pull-right">
-                    <a href="/discussions/create" class="btn btn-success" role="button">Start Discussion</a>
-                </button>
+
             </div>
         </div>
 
@@ -35,12 +34,11 @@
                         <td>{{$item["to"]}}</td>
                         <td>{{$item["text"]}}</td>
                         <td>{{$item["date"]}}</td>
-                        <td>{{$item["approved"]}}</td>
+                        <td>{{$item["approved"] = 1 ? "Yes":"No"}}</td>
                         <td>
                             <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                <button class="btn btn-danger btn-xs" data-title="Delete"><span
-                                            class="glyphicon glyphicon-eye-open"></span> View
-                                </button>
+                              <a href="/sms/{{$item['id']}}" class="btn btn-danger btn-xs" title="Edit and Update"> <span class="glyphicon glyphicon-pencil"></span> View</a>
+
                             </p>
                         </td>
                     </tr>

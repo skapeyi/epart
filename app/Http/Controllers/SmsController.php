@@ -55,7 +55,8 @@ class SmsController extends Controller
      */
     public function show($id)
     {
-        //
+        $sms = Sms::find($id);
+        return view('admin.sms.show',compact('sms'));
     }
 
     /**
@@ -78,7 +79,10 @@ class SmsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $sms = Sms::find($id);
+        $sms->approved = $request->approved;
+        $sms->save();
+        return redirect('/admin/sms');
     }
 
     /**
