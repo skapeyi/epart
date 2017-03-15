@@ -34,7 +34,11 @@
                         <td>{{$item["to"]}}</td>
                         <td>{{$item["text"]}}</td>
                         <td>{{$item["date"]}}</td>
-                        <td>{{$item["approved"] = 1 ? "Yes":"No"}}</td>
+                        @if($item['approved'] == 0)
+                        <td>{{"No"}}</td>
+                        @else
+                        <td>{{"Yes"}}</td>
+                        @endif
                         <td>
                             <p data-placement="top" data-toggle="tooltip" title="Delete">
                               <a href="/sms/{{$item['id']}}" class="btn btn-danger btn-xs" title="Edit and Update"> <span class="glyphicon glyphicon-pencil"></span> View</a>
