@@ -41,7 +41,7 @@ class AdministratorController extends Controller
     }
 
     public function sms(){
-        $sms = Sms::all()->toArray();
+        $sms = Sms::orderBy('id','DESC')->get()->toArray();
         return view('admin.sms.all',compact('sms'));
     }
 

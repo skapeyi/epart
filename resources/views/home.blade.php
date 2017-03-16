@@ -46,40 +46,32 @@
         </div>
     </section>
 
-    {{--<section id="contact" class="contact bg-primary" style="background: #943B7D">--}}
-        {{--<div class="container">--}}
-            {{--<ul class="list-inline list-social">--}}
-                {{--<li class="social-twitter">--}}
-                    {{--<a href="#"><i class="fa fa-twitter"></i></a>--}}
-                {{--</li>--}}
-                {{--<li class="social-facebook">--}}
-                    {{--<a href="#"><i class="fa fa-facebook"></i></a>--}}
-                {{--</li>--}}
-                {{--<li class="social-google-plus">--}}
-                    {{--<a href="#"><i class="fa fa-google-plus"></i></a>--}}
-                {{--</li>--}}
-            {{--</ul>--}}
-        {{--</div>--}}
-    {{--</section>--}}
+
 
     <section  id="partners" style="padding: 0px;">
         <div class="container">
             <h4>Our Partners</h4>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <a href="http://spidercenter.org" target="_blank">
                 <img src="/img/spider.png" class="img-responsive">
               </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <a href="http://www.ned.org" target="_blank">
                 <img src="/img/ned.png" class="img-responsive">
               </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <a href="http://ict4democracy.org" target="_blank">
                 <img src="/img/ict_4_dem.jpg" class="img-responsive">
               </a>
             </div>
+            <div class="col-md-3">
+              <a href="http://ict4democracy.org" target="_blank">
+                <img src="/img/stockholm.png" class="img-responsive">
+              </a>
+            </div>
+
         </div>
     </section>
 
