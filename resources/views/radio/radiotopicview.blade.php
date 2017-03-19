@@ -69,7 +69,7 @@
                 <div class="modal-body">
 
 
-                    {!! Form::open(action('RadioController@storeRadioresponse')) !!}
+                    {!! Form::open([action('RadioController@storeRadioresponse')]) !!}
 
                     {!! Form::hidden('topic_id', $topic['id']) !!}
 
