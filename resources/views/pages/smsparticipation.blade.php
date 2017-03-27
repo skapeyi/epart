@@ -5,11 +5,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5" >
-                <h5>To participate through SMS please follow the instructions below. Participation is free of charge.</h5>
+                <h4>To participate through SMS please follow the instructions below. Participation is free of charge.</h4>
+                <h5>In Uganda</h5>
                 <ol style="padding-left: 20px;">
                     <li>Go to your message and create new message.  </li>
                     <li>Type MML leave a space Type your message. </li>
                     <li>Send the message to 6115.</li>
+                </ol>
+
+                <h5>In Kenya</h5>
+                <ol style="padding-left: 20px;">
+                    <li>Go to your message and create new message.  </li>
+                    <li>Type MML leave a space Type your message. </li>
+                    <li>Send the message to 20880.</li>
                 </ol>
                 <p><stong>We will receive your message and have it included in our discussion.Thank You  </strong></p>
 
