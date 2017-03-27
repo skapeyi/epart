@@ -109,11 +109,9 @@
                     <li class="active"><a href="/admin/users">Users</a></li>
                     <li><a href="/admin/discussions">Discussions</a></li>
                     <li><a href="/admin/information">Information</a></li>
-                    <li><a href="/radiotopics">Dj Area</a></li>
+                    <li><a href="/radiotopics">Media House Area</a></li>
                     <li><a href="/admin/sms">Sms</a></li>
                 </ul>
-
-
             </div>
             <div class="col-md-9">
                 @yield('content')

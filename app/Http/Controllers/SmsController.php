@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Log;
 use App\Sms;
+use App\Discussion;
 
 class SmsController extends Controller
 {
@@ -56,7 +57,8 @@ class SmsController extends Controller
     public function show($id)
     {
         $sms = Sms::find($id);
-        return view('admin.sms.show',compact('sms'));
+        $discussions = Discussion::all(['id', 'title']);
+        return view('admin.sms.show',compact('sms','discussions'));
     }
 
     /**
@@ -81,6 +83,7 @@ class SmsController extends Controller
     {
         $sms = Sms::find($id);
         $sms->approved = $request->approved;
+        $sms->discussion_id = $request->discussion_id;
         $sms->save();
         return redirect('/admin/sms');
     }

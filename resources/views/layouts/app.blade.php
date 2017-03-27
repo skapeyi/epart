@@ -61,11 +61,12 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Discussions <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                         <li><a href="/discussions">Ongoing Discussions</a></li>
-                        <li><a href="/radiotopics">Dj Login</a></li>
+                        <li><a href="/radiotopics">Media House Login</a></li>
                       </ul>
                     </li>
                     <li><a href="{{ url('/information') }}">Information</a></li>
                     <li><a href="{{ url('/sms-participation') }}">SMS participation</a></li>
+                    <li><a href="{{ url('/social-media') }}">Social Media Participation</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>

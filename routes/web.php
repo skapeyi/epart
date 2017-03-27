@@ -89,3 +89,9 @@ Route::post('/radiotopicresponse','RadioController@storeRadioresponse')->middlew
 */
 Route::resource('sms','SmsController');
 Route::post('/retrieve_shortcode_messages','SmsController@store');
+
+/*
+|---------------------------------------------------------
+| Social media controller
+|---------------------------------------------------------
+*/

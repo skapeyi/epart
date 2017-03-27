@@ -27,6 +27,15 @@
               {!! Form::select('approved', [0 => 'Not Approved', 1 => 'Approved'], null,['class' => 'form-control']) !!}
             </div>
 
+            <div class="form-group">
+              {!! Form::label('discussion_id','Discussion') !!}
+              <select class="form-control" name="discussion_id">
+                @foreach($discussions as $item)
+                  <option value="{{$item->id}}">{{$item->title}}</option>
+                @endforeach
+              </select>
+            </div>
+
 
             <div class="form-group">
               {!! Form::submit('Submit',['class' => 'btn btn-primary']) !!}
