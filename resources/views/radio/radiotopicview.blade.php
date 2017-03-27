@@ -67,9 +67,7 @@
                     <h4 class="modal-title">New Response</h4>
                 </div>
                 <div class="modal-body">
-
-
-                    {!! Form::open([action('RadioController@storeRadioresponse')]) !!}
+                    {!! Form::open(['action' => 'RadioController@storeRadioresponse']) !!}
 
                     {!! Form::hidden('topic_id', $topic['id']) !!}
 
@@ -87,7 +85,7 @@
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">
-                            Add topic
+                            Add Response
                         </button>
                     </div>
                 </div>

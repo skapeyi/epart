@@ -8,8 +8,7 @@
 			<h1>Add new radio topic</h1>
 			<div class="panel panel-primary">
                 <div class="panel-body">
-                    {!! Form::open([action('RadioController@storeRadiotopic')]) !!}
-
+										{!! Form::open(['action' => 'RadioController@storeRadiotopic']) !!}
                     <div class="form-group">
                         {!! Form::text('title', 'Title',['class' => 'form-control']) !!}
                     </div>
