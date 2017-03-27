@@ -95,3 +95,4 @@ Route::post('/retrieve_shortcode_messages','SmsController@store');
 | Social media controller
 |---------------------------------------------------------
 */
+Route::get('/social-media','SocialmediaController@index');
