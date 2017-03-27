@@ -16,8 +16,11 @@ class InformationController extends Controller
 //    }
 
     public function index(){
-        $information_articles = Information::all()->toArray();
-        return view('information.index', compact('information_articles'));
+      $educ = Information::where(['category' => 'educ-and-skills-dev'])->get()->toArray() ;
+      $health = Information::where(['category' => 'health-and-wellbeing'])->get()->toArray() ;
+      $econ = Information::where(['category' => 'economic-development'])->get()->toArray() ;
+      $other = Information::where(['category' => 'others'])->get()->toArray();
+        return view('information.index', compact('educ','health','econ','other'));
     }
 
     public function create(){

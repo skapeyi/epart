@@ -9,14 +9,14 @@
                 <h5>In Uganda</h5>
                 <ol style="padding-left: 20px;">
                     <li>Go to your message and create new message.  </li>
-                    <li>Type MML leave a space Type your message. </li>
+                    <li>Type MML leave a space, your district leave a space and Type your message. </li>
                     <li>Send the message to 6115.</li>
                 </ol>
 
                 <h5>In Kenya</h5>
                 <ol style="padding-left: 20px;">
                     <li>Go to your message and create new message.  </li>
-                    <li>Type MML leave a space Type your message. </li>
+                    <li>Type MML leave a space, your district leave a space and Type your message. </li>
                     <li>Send the message to 20880.</li>
                 </ol>
                 <p><stong>We will receive your message and have it included in our discussion.Thank You  </strong></p>
@@ -38,7 +38,7 @@
                             <tbody>
                               @foreach($smses as $sms)
                                 <tr>
-                                    <td>{{substr($sms['from'],0,9)}} **</td>
+                                    <td>{{substr($sms['from'],0,8)}} **</td>
                                     <td>{{$sms['text']}}</td>
                                     <td>{{$sms['date']}}</td>
                                 </tr>

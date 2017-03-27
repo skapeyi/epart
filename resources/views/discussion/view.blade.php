@@ -40,7 +40,7 @@
                             <div class="comment-main-level">
                                 <!-- Avatar -->
                                 <div class="comment-avatar"><img
-                                            src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg"
+                                            src="/img/user.png"
                                             alt=""></div>
 
                                 <div class="comment-box">
@@ -57,6 +57,40 @@
                                     </div>
                                     <div class="comment-content">
                                          {{$comment['content']}}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    @endforeach
+
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="comments-container">
+                <h4>SMS Comments</h4>
+                <ul id="comments-list" class="comments-list">
+                    @foreach($smses as $sms)
+                        <li>
+                            <div class="comment-main-level">
+                                <!-- Avatar -->
+                                <div class="comment-avatar"><img
+                                            src="/img/user.png"
+                                            alt=""></div>
+
+                                <div class="comment-box">
+                                    <div class="comment-head">
+
+
+                                        <h6 class="comment-name">{{substr($sms['from'],0,8)}} **</h6>
+                                        <span><strong>Posted on:</strong> {{$sms['date']}}</span>
+                                        <i class="fa fa-reply"></i>
+                                        <i class="fa fa-heart"></i>
+                                    </div>
+                                    <div class="comment-content">
+                                         {{$sms['text']}}
                                     </div>
                                 </div>
                             </div>

@@ -7,6 +7,7 @@ use App\Discussion;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use App\Sms;
 
 class DiscussionController extends Controller
 {
@@ -29,8 +30,12 @@ class DiscussionController extends Controller
      */
     public function index()
     {
-        $discussions = Discussion::all()->toArray();
-        return view('discussion.index', compact('discussions'));
+        $educ = Discussion::where(['category' => 'educ-and-skills-dev'])->get()->toArray() ;
+        $health = Discussion::where(['category' => 'health-and-wellbeing'])->get()->toArray() ;
+        $econ =Discussion::where(['category' => 'economic-development'])->get()->toArray() ;
+        $other = Discussion::where(['category' => 'others'])->get()->toArray();
+
+        return view('discussion.index', compact('educ','health','econ','other'));
     }
 
     /**
@@ -81,7 +86,8 @@ class DiscussionController extends Controller
         $this->updateCount($id);
         $discussion = Discussion::findOrFail($id)->toArray();
         $comments = Comment::where(['discussion_id' => $id])->latest()->get()->toArray();
-        return view('discussion.view', compact('discussion','comments'));
+        $smses = Sms::where(['discussion_id' => $id])->latest()->get()->toArray();
+        return view('discussion.view', compact('discussion','comments','smses'));
     }
 
     public function updateCount($id){

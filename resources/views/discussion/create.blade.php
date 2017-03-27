@@ -27,12 +27,12 @@
 
                             <div class="col-md-10">
 
-                                <select class="form-control" id="category" name="category">
-                                    <option>Education</option>
-                                    <option>Politics</option>
-                                    <option>Service delivery</option>
-                                    <option>Health</option>
-                                </select>
+                              <select class="form-control" id="category" name="category">
+                                  <option value="educ-and-skills-dev">Education & Skills Development</option>
+                                  <option value="health-and-wellbeing">Health & Wellbeing</option>
+                                  <option value="economic-development">Economic Development </option>
+                                  <option value="others">Others </option>
+                              </select>
 
                                 @if ($errors->has('category'))
                                     <span class="help-block">

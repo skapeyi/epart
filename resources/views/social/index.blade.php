@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-md-6">
           <h2>From Twitter</h2>
-          <a class="twitter-timeline" href="https://twitter.com/smmugabe">Tweets by smmugabe</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a class="twitter-timeline" href="https://twitter.com/mmlepart">Tweets by mmlepart</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
     </div>
