@@ -22,14 +22,14 @@
             <div class="row" >
                 <div class="col-md-4">
                     <h3 class="section-heading">e - Information</h3>
-                    <p> This module disseminates all formats of information to stakeholders Mobile SMS, e-mails, images, downloads, video, voice and through social media platforms.</p>
+                    <p>This provides information to stakeholders through Mobile SMS, e-mails, images, downloads, video, voice and through social media platforms.</p>
                     <a href="/information" class="btn btn-outline btn-xl page-scroll">Get information now!</a>
 
                 </div>
 
                 <div class="col-md-4">
                     <h3 class="section-heading">e-Discussion</h3>
-                    <p>This online module is designed to supplement the offline discussions and knowledge sharing and has features that support real-time online discussions through SMS, Social Media, over the web.</p>
+                    <p>This supplements the offline discussions and knowledge sharing and has features that support real-time online discussions through SMS, Social Media, over the web.</p>
                     <a href="/discussions" class="btn btn-outline btn-xl page-scroll">Get involved!</a>
 
 
@@ -37,8 +37,8 @@
 
                 <div class="col-md-4">
                     <h3 class="section-heading">e - Decision Making</h3>
-                    <p> This online module is designed to supplement offline decision making process through providing strategic priority decision options drawn from e-discussion and e-information modules of the MML eParticipation System.</p>
-                    <a href="/login" class="btn btn-outline btn-xl page-scroll">Let's Get Started!</a>
+                    <p> This supplements the decision making process through providing strategic priority decision options drawn from e-discussion and e-information modules of the MML eParticipation System.</p>
+                    <a href="/login" class="btn btn-outline btn-xl page-scroll"> Decide Now !</a>
 
                 </div>
 

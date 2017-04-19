@@ -35,25 +35,30 @@ class InformationController extends Controller
         else{
             $user_id = Information::ANONYMOUS_USER;
         }
-        if(Input::file('attachment_url')->isValid()){
-            $path = 'uploads';
-            $extension = Input::file('attachment_url')->getClientOriginalExtension();
-            $originalName = Input::file('attachment_url')->getClientOriginalName();
-            $fileName = $originalName.'.'.$extension;
-            Input::file('attachment_url')->move($path,$fileName);
-            $attachment_url = "uploads/".$fileName;
+        try {
+          if(Input::file('attachment_url')->isValid()){
+              $path = 'uploads';
+              $extension = Input::file('attachment_url')->getClientOriginalExtension();
+              $originalName = Input::file('attachment_url')->getClientOriginalName();
+              $fileName = $originalName.'.'.$extension;
+              Input::file('attachment_url')->move($path,$fileName);
+              $attachment_url = "uploads/".$fileName;
 
-            $information = Information::create([
-                'title' => $request->title,
-                'category' => $request->category,
-                'content' => $request->content,
-                'user_id' => $user_id,
-                'attachment_url' => $attachment_url
-            ]);
+              $information = Information::create([
+                  'title' => $request->title,
+                  'category' => $request->category,
+                  'content' => $request->content,
+                  'user_id' => $user_id,
+                  'attachment_url' => $attachment_url
+              ]);
+                $request->session()->flash('status','Information has been saved and is awaiting approval');
+          }
+
+        } catch (Exception $e) {
+          $request->session()->flash('status','Please attach a file!');
+
+          return redirect('/information');
         }
-
-        $request->session()->flash('status','Information has been saved and is awaiting approval');
-
         return redirect('/information');
     }
 

@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <legend><span class="fa fa-map"></span> Our office</legend>
                 <address>
                     Toro Development Network (ToroDev)<br/>
@@ -13,8 +13,8 @@
                     Email: <a href="mailto:admin@torodev.kabissa.org">admin@torodev.kabissa.org</a><br/>
                     Tel: +256 464 660034
                 </address>
-            </div>
-            <div class="col-md-8"><h1>Get in touch with us</h1>
+            </div> -->
+            <div class="col-md-8 col-md-offset-2"><h1>Get in touch with us</h1>
 
                 <form>
                     <div class="row">

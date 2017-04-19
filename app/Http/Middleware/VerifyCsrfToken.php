@@ -12,6 +12,7 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        'retrieve_shortcode_messages'
+        'retrieve_shortcode_messages',
+        'send_sms'
     ];
 }
