@@ -63,6 +63,18 @@ Route::get('/admin/sms','AdministratorController@sms');
 
 /*
 |---------------------------------------------------------
+| Collecting information for data tables
+|---------------------------------------------------------
+*/
+Route::get('get_users','ResourcesController@get_users');
+Route::get('get_discussions','ResourcesController@get_discussions');
+Route::get('get_information','ResourcesController@get_information');
+Route::get('get_smses','ResourcesController@get_smses');
+Route::get('get_radiotopics','ResourcesController@get_radiotopics');
+
+
+/*
+|---------------------------------------------------------
 | The Comment controller
 |---------------------------------------------------------
 */

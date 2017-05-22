@@ -30,7 +30,18 @@
             <div class="form-group">
               {!! Form::label('discussion_id','Discussion') !!}
               <select class="form-control" name="discussion_id">
+              <option selected disabled>Please select one option</option>
                 @foreach($discussions as $item)
+                  <option value="{{$item->id}}">{{$item->title}}</option>
+                @endforeach
+              </select>
+            </div>
+
+            <div class="form-group">
+              {!! Form::label('radiotopic_id','Radio Topic') !!}
+              <select class="form-control" name="radiotopic_id">
+              <option selected disabled>Please select one option</option>
+                @foreach($radiotopics as $item)
                   <option value="{{$item->id}}">{{$item->title}}</option>
                 @endforeach
               </select>

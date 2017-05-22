@@ -10,49 +10,38 @@
         </div>
 
         <div class="panel-body">
-            <table class="table table-striped">
+            <table class="table table-striped" id="sms-table">
                 <thead>
                 <tr>
-                    <th>#</th>
+                    <th>Created At</th>
                     <th>From</th>
-                    <th>To</th>
                     <th>Text</th>
                     <th>Date Sent</th>
                     <th>Approved</th>
                     <th>Actions</th>
                 </tr>
-                </thead>
-                <tbody>
-                @php
-                $i = 1
-                @endphp
-
-                @foreach($sms as $item)
-                    <tr>
-                        <td>{{$i}}</td>
-                        <td>{{$item["from"]}}</td>
-                        <td>{{$item["to"]}}</td>
-                        <td>{{$item["text"]}}</td>
-                        <td>{{$item["date"]}}</td>
-                        @if($item['approved'] == 0)
-                        <td>{{"No"}}</td>
-                        @else
-                        <td>{{"Yes"}}</td>
-                        @endif
-                        <td>
-                            <p data-placement="top" data-toggle="tooltip" title="Delete">
-                              <a href="/sms/{{$item['id']}}" class="btn btn-danger btn-xs" title="Edit and Update"> <span class="glyphicon glyphicon-pencil"></span> View</a>
-
-                            </p>
-                        </td>
-                    </tr>
-                    @php
-                    $i++;
-                    @endphp
-                @endforeach
-
-                </tbody>
+                </thead>             
             </table>
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      $('#sms-table').DataTable({
+          processing: true,
+          serverSide: true,
+          ajax: '{!! url('get_smses') !!}',
+          columns: [
+            { data: 'created_at', name: 'created_at'},
+            { data: 'from', name: 'from' },
+            { data: 'text', name: 'text' },
+            { data: 'date', name: 'date' },
+            { data: 'approved', name: 'approved'},            
+            { data: 'view', name: 'view', orderable: false, searchable: false},
+          ]
+        });
+    });
+</script>
+@endpush

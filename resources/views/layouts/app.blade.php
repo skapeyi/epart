@@ -14,6 +14,8 @@
     <link href="/css/new-age.min.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
     <!-- <link href="/css/creative.min.css" rel="stylesheet"> -->
+    
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
 
     <!-- Scripts -->
     <script>
@@ -104,8 +106,11 @@
 </div>
 <div class="navbar navbar-default hidden-sm hidden-xs">
     <div class="container">
-        <p class="navbar-text pull-left">© <?= date("Y")?>
+        <p class="navbar-text pull-left">© <?= date("Y")?>     
+                
             <a href="http://torodev.co.ug/" target="_blank">Toro Development Network</a>
+            <a href="https://www.facebook.com/Toro-Development-Network-ToroDev-208441649166138/"><i class="fa fa-twitter-square fa-3x social"></i></a>
+            <a href="https://twitter.com/mmlepart"><i class="fa fa-facebook-square fa-3x social"></i></a>
         </p>
 
         <ul class="nav navbar-nav nav-right pull-right">
@@ -116,11 +121,14 @@
         </ul>
     </div>
 </div>
-
 <!-- Scripts -->
 <script src="/js/app.js"></script>
 <script src="/js/custom.js"></script>
 <script src="https://use.fontawesome.com/52045bbe38.js"></script>
-
+<script src="{{ asset('js/jquery.min.js')}}"></script>
+<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+@stack('scripts')
 </body>
 </html>

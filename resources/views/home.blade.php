@@ -51,26 +51,38 @@
     <section  id="partners" style="padding: 0px;">
         <div class="container">
             <h4>Our Partners</h4>
-            <div class="col-md-3">
+            <div class="col-md-2">
               <a href="http://spidercenter.org" target="_blank">
                 <img src="/img/spider.png" class="img-responsive">
               </a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
               <a href="http://www.ned.org" target="_blank">
                 <img src="/img/ned.png" class="img-responsive">
               </a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
               <a href="http://ict4democracy.org" target="_blank">
                 <img src="/img/ict_4_dem.jpg" class="img-responsive">
               </a>
             </div>
-            <div class="col-md-3">
-              <a href="http://ict4democracy.org" target="_blank">
+            <div class="col-md-2">
+              <a href="http://wougnet.org/" target="_blank">
+                <img src="/img/wougnet.jpg" class="img-responsive">
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="#" target="_blank">
                 <img src="/img/stockholm.png" class="img-responsive">
               </a>
             </div>
+            
+            <div class="col-md-2">
+              <a href="#" target="_blank">
+                <img src="/img/dcfc.jpg" class="img-responsive">
+              </a>
+            </div>
+            
 
         </div>
     </section>

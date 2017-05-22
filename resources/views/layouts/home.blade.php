@@ -15,6 +15,7 @@
     <link href="/css/new-age.min.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
     <!-- <link href="/css/creative.min.css" rel="stylesheet"> -->
+    
 
     <!-- Scripts -->
     <script>
@@ -25,7 +26,7 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 50px; background-color: #FFFFFF; min-height: 80px;">
         <div class="container">
             <div class="navbar-header">
 
@@ -105,8 +106,11 @@
 </div>
 <div class="navbar navbar-default hidden-sm hidden-xs">
     <div class="container">
-        <p class="navbar-text pull-left">© <?= date("Y")?>
+        <p class="navbar-text pull-left">© <?= date("Y")?>     
+                
             <a href="http://torodev.co.ug/" target="_blank">Toro Development Network</a>
+            <a href="https://www.facebook.com/Toro-Development-Network-ToroDev-208441649166138/"><i class="fa fa-twitter-square fa-3x social"></i></a>
+            <a href="https://twitter.com/mmlepart"><i class="fa fa-facebook-square fa-3x social"></i></a>
         </p>
 
         <ul class="nav navbar-nav nav-right pull-right">

@@ -106,7 +106,8 @@ class DiscussionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $discussion= Discussion::find($id);
+        return view('discussion.edit', compact('discussion'));
     }
 
     /**
@@ -118,7 +119,12 @@ class DiscussionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $discussion = Discussion::find($id);
+        $discussion->deleted = $request->deleted;
+        $discussion->title = $request->title;
+        $discussion->content = $request->content;
+        $discussion->save();
+        return redirect('/admin/discussions');
     }
 
     /**

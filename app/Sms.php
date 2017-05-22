@@ -11,7 +11,7 @@ class Sms extends Model
     const STATUS_NOT_APPROVED = 0;
 
     protected $fillable = [
-      'from','to','text','date','aft_id','link_id','discussion_id','approved'
+      'from','to','text','date','aft_id','link_id','discussion_id','approved','radiotopic_id'
     ];
 
     protected $attributes =[

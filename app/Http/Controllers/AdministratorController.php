@@ -11,6 +11,7 @@ use App\Topic;
 use App\Comment;
 use App\Sms;
 use Illuminate\Support\Facades\DB;
+use Datatables;
 
 class AdministratorController extends Controller
 {
@@ -25,19 +26,20 @@ class AdministratorController extends Controller
         return view('admin.users.all', compact('users'));
     }
 
-    public function getUsers(){
-        return Datatables::of(User::query())->make(true);
-    }
-
 
     public function discussions(){
         $discussions = Discussion::all()->toArray();
         return view('admin.discussions.all',compact('discussions'));
     }
+    
 
     public function information(){
         $information = Information::all()->toArray();
         return view('admin.information.all', compact('information'));
+    }
+
+    public function getInformation(){
+
     }
 
     public function sms(){
@@ -45,5 +47,7 @@ class AdministratorController extends Controller
         return view('admin.sms.all',compact('sms'));
     }
 
+    public function getSmses(){
 
+    }
 }

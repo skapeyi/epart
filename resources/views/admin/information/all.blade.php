@@ -11,46 +11,38 @@
         </div>
 
         <div class="panel-body">
-            <table class="table table-striped">
+            <table class="table table-striped" id="information-table">
                 <thead>
                 <tr>
-                    <th>#</th>
+                    <th>Created</th>
                     <th>Topic</th>
                     <th>Category</th>
                     <th>Author</th>
                     <th>Total views</th>
-                    <th>Created</th>
                     <th>Actions</th>
                 </tr>
-                </thead>
-                <tbody>
-                @php
-                $i = 1
-                @endphp
-
-                @foreach($information as $item)
-                    <tr>
-                        <td>{{$i}}</td>
-                        <td>{{$item["title"]}}</td>
-                        <td>{{$item["category"]}}</td>
-                        <td>{{$item["user_id"]}}</td>
-                        <td>{{$item["click_count"]}}</td>
-                        <td>{{date('d/M/y',strtotime($item["created_at"]))}}</td>
-                        <td>
-                            <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                <button class="btn btn-danger btn-xs" data-title="Delete"><span
-                                            class="glyphicon glyphicon-trash"></span> Delete
-                                </button>
-                            </p>
-                        </td>
-                    </tr>
-                    @php
-                    $i++;
-                    @endphp
-                @endforeach
-
-                </tbody>
+                </thead>                
             </table>
         </div>
     </div>
 @endsection
+@push('scripts')
+<script>
+jQuery(document).ready(function ($) {
+      $('#information-table').DataTable({
+          processing: true,
+          serverSide: true,
+          ajax: '{!! url('get_information') !!}',
+          columns: [
+            { data: 'created_at', name: 'created_at' },
+            {data: 'title', name: 'title'},
+            {data: 'category', name:'category'},
+            {data: 'user_id', name:'user_id'},
+            {data: 'click_count', name: 'click_count'},            
+            {data: 'actions', name: 'actions', orderable: false, searchable: false}
+
+          ]
+        });
+    });
+</script>
+@endpush

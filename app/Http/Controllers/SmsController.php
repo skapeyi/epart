@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Log;
 use App\Sms;
 use App\Discussion;
+use App\Radiotopics;
 
 class SmsController extends Controller
 {
@@ -58,7 +59,8 @@ class SmsController extends Controller
     {
         $sms = Sms::find($id);
         $discussions = Discussion::all(['id', 'title']);
-        return view('admin.sms.show',compact('sms','discussions'));
+        $radiotopics = Radiotopics::all(['id','title']);
+        return view('admin.sms.show',compact('sms','discussions','radiotopics'));
     }
 
     /**
@@ -83,7 +85,14 @@ class SmsController extends Controller
     {
         $sms = Sms::find($id);
         $sms->approved = $request->approved;
-        $sms->discussion_id = $request->discussion_id;
+        if(!empty($request->discussion_id)){
+            $sms->discussion_id = $request->discussion_id;
+        }
+
+        if(!empty($request->radiotopic_id)){
+            $sms->radiotopic_id = $request->radiotopic_id;
+        }
+        
         $sms->save();
         return redirect('/admin/sms');
     }

@@ -11,48 +11,40 @@
         </div>
 
         <div class="panel-body">
-            <table class="table table-striped">
+            <table class="table table-striped" id="discussions-table">
                 <thead>
-                <tr>
-                    <th>#</th>
+                <tr>                    
                     <th>Title</th>
                     <th>Category</th>
-                    <th>Author</th>
                     <th>Total views</th>
                     <th>Approved</th>
                     <th>Created</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
-                <tbody>
-                @php
-                $i = 1
-                @endphp
-
-                @foreach($discussions as $discussion)
-                    <tr>
-                        <td>{{$i}}</td>
-                        <td>{{$discussion["title"]}}</td>
-                        <td>{{$discussion["category"]}}</td>
-                        <td>{{$discussion["user_id"]}}</td>
-                        <td>{{$discussion["click_count"]}}</td>
-                        <td>{{$discussion["approved"]}}</td>
-                        <td>{{date('d/M/y',strtotime($discussion["created_at"]))}}</td>
-                        <td>
-                            <p data-placement="top" data-toggle="tooltip" title="Delete">
-                                <button class="btn btn-danger btn-xs" data-title="Delete"><span
-                                            class="glyphicon glyphicon-trash"></span> Delete
-                                </button>
-                            </p>
-                        </td>
-                    </tr>
-                    @php
-                    $i++;
-                    @endphp
-                @endforeach
-
-                </tbody>
+                
             </table>
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script>
+jQuery(document).ready(function ($) {
+      $('#discussions-table').DataTable({
+          processing: true,
+          serverSide: true,
+          ajax: '{!! url('get_discussions') !!}',
+          columns: [
+            { data: 'title', name: 'title' },
+            { data: 'category', name: 'category' },
+            { data: 'click_count', name: 'click_count'},
+            { data: 'approved', name: 'approved'},
+            { data: 'created_at', name: 'created_at'},
+            {data: 'actions', name: 'actions', orderable: false, searchable: false}
+
+          ]
+        });
+    });
+</script>
+@endpush
