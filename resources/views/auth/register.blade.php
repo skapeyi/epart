@@ -23,6 +23,33 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
+                            <label for="country" class="col-md-4 control-label">Country</label>
+
+                            <div class="col-md-6">
+                                <input id="country" type="text" class="form-control" name="country" value="{{ old('country') }}" autofocus>
+
+                                @if ($errors->has('country'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('country') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('district') ? ' has-error' : '' }}">
+                            <label for="district" class="col-md-4 control-label">District</label>
+
+                            <div class="col-md-6">
+                                <input id="district" type="text" class="form-control" name="district" value="{{ old('district') }}" required autofocus>
+
+                                @if ($errors->has('district'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('district') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Telephone</label>

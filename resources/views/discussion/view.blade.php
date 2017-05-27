@@ -14,6 +14,7 @@
               <div class="panel panel-default">
                   <div class="panel-body">
                       {!! $discussion['content'] !!}
+                      
                   </div>
               </div>
 
@@ -25,15 +26,23 @@
         <div class="row">
             <div class="comments-container">
                 <h4>Discussion Comments</h4>
-                <div class="form-group">
-                    <label for="comment">Comment:</label>
-                    <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
-                    <input type="hidden" name="_discussion_id" id="discussion_id" value="{{ $discussion['id'] }}">
-                    <textarea class="form-control" rows="5" id="comment" placeholder="Add comment here."></textarea>
+                {!! Form::open(['action' => 'CommentController@store','enctype'=>'multipart/form-data']) !!}
+                <div class="form-group">                    
+                    <input type="hidden" name="discussion_id" id="discussion_id" value="{{ $discussion['id'] }}">
+
+                    <textarea class="form-control" rows="5" id="content" name="content" placeholder="Add comment here."></textarea>
+
+                    <div class="form-group">
+                        {!! Form::label('evidence', 'Evidence'); !!}
+                        {!! Form::file('evidence',['accept' => '*']) !!}
+                    </div>
+
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary" id="post_comment">Submit comment</button>
+                    <button type="submit" class="btn btn-primary">Submit comment</button>
                 </div>
+                {!! Form::close() !!}
+
                 <ul id="comments-list" class="comments-list">
                     @foreach($comments as $comment)
                         <li>
@@ -52,11 +61,21 @@
 
                                         <h6 class="comment-name">{{$name}}</h6>
                                         <span><strong>Posted on:</strong> {{$comment['created_at']}}</span>
-                                        <i class="fa fa-reply"></i>
-                                        <i class="fa fa-heart"></i>
+                                        <!-- <i class="fa fa-reply"></i>
+                                        <i class="fa fa-heart"></i> -->
                                     </div>
                                     <div class="comment-content">
                                          {{$comment['content']}}
+                                         @if(!empty($comment['evidence_url']))
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                Evidence:
+                                            </div>
+                                            <div class="col-md-9">
+                                                <a href="/{!! $comment['evidence_url'] !!}" target="_blank">Follow link for more!</a>
+                                            </div>
+                                        </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

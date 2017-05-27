@@ -68,6 +68,7 @@
                     </li>
                     <li><a href="{{ url('/information') }}">Information</a></li>
                     <li><a href="{{ url('/sms-participation') }}">SMS participation</a></li>
+                    <li><a href="{{ url('/sms-participation') }}">Send SMS</a></li>
                     <li><a href="{{ url('/social-media') }}">Social Media Participation</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())

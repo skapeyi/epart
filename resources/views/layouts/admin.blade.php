@@ -110,7 +110,8 @@
                     <li><a href="/admin/discussions">Discussions</a></li>
                     <li><a href="/admin/information">Information</a></li>
                     <li><a href="/radiotopics">Media House Area</a></li>
-                    <li><a href="/admin/sms">Sms</a></li>
+                    <li><a href="/admin/sms">Incoming sms</a></li>
+                    <li><a href="/admin/outgoingsms">Outgoing sms</a></li>
                 </ul>
             </div>
             <div class="col-md-9">

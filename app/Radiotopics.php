@@ -12,7 +12,7 @@ class Radiotopics extends Model
     const STATUS_ACTIVE = 0;
     const STATUS_DELETED = 1;
 
-    protected $fillable = ['title','description','station_name','deleted','created_by'];
+    protected $fillable = ['title','description','station_name','deleted','created_by','audio_url'];
 
     protected $attributes = [
         'deleted' => self::STATUS_ACTIVE,

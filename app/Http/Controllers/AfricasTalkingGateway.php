@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Http\Controllers;
 /*
 
   # COPYRIGHT (C) 2014 AFRICASTALKING LTD <www.africastalking.com>
@@ -16,7 +16,7 @@
 
 */
 
-class AfricasTalkingGatewayException extends Exception  {}
+class AfricasTalkingGatewayException extends \Exception  {}
 
 class AfricasTalkingGateway
 {

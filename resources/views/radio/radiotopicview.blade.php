@@ -9,6 +9,19 @@
                 <div class="panel">
                     <div class="panel-body">
                         {!! $topic['description'] !!}
+
+
+                        @if(!empty($topic['audio_url']))
+                            <div class="row">
+                            <div class="col-md-12">
+                                <h6>Listen to radio recording now!</h6><br/>
+                                <audio controls>   
+                                <source src="/{!! $topic['audio_url']!!}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                            </audio>
+                            </div>
+                        </div>
+                        @endif
                     </div>
 
                 </div>

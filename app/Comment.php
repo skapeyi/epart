@@ -22,7 +22,7 @@ class Comment extends Model
         'deleted' => self::STATUS_ACTIVE,
     ];
 
-    protected $fillable = ['content','user_id','discussion_id'];
+    protected $fillable = ['content','user_id','discussion_id','evidence_url'];
 
     protected $table = 'discussion_comments';
     

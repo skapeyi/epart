@@ -101,6 +101,10 @@ Route::post('/radiotopicresponse','RadioController@storeRadioresponse')->middlew
 */
 Route::resource('sms','SmsController');
 Route::post('/retrieve_shortcode_messages','SmsController@store');
+Route::post('/send_bulk_sms','SmsController@send_bulk_sms');
+Route::get('/admin/outgoingsms','SmsController@outgoingsms');
+Route::get('/get_outgoing_sms','SmsController@get_outgoing_sms');
+Route::post('/ait_delivery_callback','SmsController@ait_delivery_callback');
 
 /*
 |---------------------------------------------------------

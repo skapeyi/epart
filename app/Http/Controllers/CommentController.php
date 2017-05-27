@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use App\Discussion;
+use Input;
 
 class CommentController extends Controller
 {
@@ -40,22 +41,41 @@ class CommentController extends Controller
     {
         //Log::info($request);
         if(Auth::check()){
-            $user_id = Auth::user()->id;
+            $user_id = Auth::user()->id;           
         }
         else{
             $user_id = Discussion::ANONYMOUS_USER;
         }
+        if(Input::file('evidence')){
+          $path = 'uploads/evidence';
+          $extension = Input::file('evidence')->getClientOriginalExtension();
+          $originalName = Input::file('evidence')->getClientOriginalName();
+          $fileName = $originalName;
+          Input::file('evidence')->move($path,$fileName);
+          $evidence_url = "uploads/evidence/".$fileName;
+          }
 
-        $comment = Comment::create([
-            'content' => $request->content,
-            'user_id' => $user_id,
-            'discussion_id' => $request->discussion_id
-        ]);
+        $comment = new Comment();
+        if(!empty($evidence_url)){
+            $comment->evidence_url = $evidence_url;           
+        }
+        $comment->content = $request->content;
+        $comment->user_id = $user_id;
+        $comment->discussion_id = $request->discussion_id;
 
-
-        $request->session()->flash('status','You comment has been saved and is awaiting approval');
+        if($comment->save()){
+            $request->session()->flash('status','You comment has been saved and is awaiting approval');
 
         return redirect('/discussions/'.$request->discussion_id);
+        }
+        else{
+             $request->session()->flash('error','You comment has not been saved and is awaiting approval');
+
+        return redirect('/discussions/'.$request->discussion_id);
+        }      
+
+
+       
     }
 
     /**

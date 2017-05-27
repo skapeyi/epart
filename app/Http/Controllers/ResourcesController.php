@@ -14,9 +14,7 @@ use App\Radiotopics;
 class ResourcesController extends Controller
 {
     public function get_users(){
-        return Datatables::of(User::query())->orderby('id','desc')
-        ->addColumn('view', function($user){
-                return '<a href ="users/'.$user->id.'"><i class="fa fa-eye"></i></a> ';})
+        return Datatables::of(User::query())->orderby('id','desc')        
         ->make(true);
     }
 
@@ -35,7 +33,7 @@ class ResourcesController extends Controller
     }
 
     public function get_smses(){
-    	return Datatables::of(Sms::query())
+    	return Datatables::of(Sms::query())->where(['type' => 'outgoing'])
         ->addColumn('view', function($item){
             return '<a href ="/sms/'.$item->id.'"><i class="fa fa-eye"></i></a>';
         })->make(true);

@@ -6,6 +6,7 @@ use App\Radioresponses;
 use App\Radiotopics;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 
 class RadioController extends Controller
 {
@@ -19,16 +20,34 @@ class RadioController extends Controller
     }
 
     public function storeRadiotopic(Request $request){
+        ini_set('post_max_size', '300M'); 
+        ini_set('upload_max_filesize', '300M'); 
+        
         if(Auth::check()){
-            $user_id = Auth::user()->id;
-            $topic = Radiotopics::create([
-                'title' => $request->title,
-                'created_by' => $user_id,
-                'station_name' => $request->station_name,
-                'description' => $request->description
-            ]);
+            if(Input::file('recording')){
+              $path = 'uploads/audio';
+              $extension = Input::file('recording')->getClientOriginalExtension();
+              $originalName = Input::file('recording')->getClientOriginalName();
+              $fileName = $originalName;
+              Input::file('recording')->move($path,$fileName);
+              $audio_url = "uploads/audio/".$fileName;
+          }
 
-            return redirect('/radiotopics');
+            $user_id = Auth::user()->id;
+            $topic = new Radiotopics();
+            if(!empty($audio_url)){
+                $topic->audio_url = $audio_url;
+
+            }
+            $topic->title = $request->title;
+            $topic->created_by = $user_id;
+            $topic->station_name = $request->station_name;
+            $topic->description = $request->description;
+
+            if($topic->save()){
+                return redirect('/radiotopics');
+            }
+            
         }
         else{
             return redirect('/login');
